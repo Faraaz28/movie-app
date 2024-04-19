@@ -1,3 +1,7 @@
+257137c6434a4849b6d1c12e4befa4a1
+
+https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=257137c6434a4849b6d1c12e4befa4a1
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
