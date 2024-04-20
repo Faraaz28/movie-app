@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 function Shopping({ overview, title, poster_path, release_date }) {
     const sliceTitle = title.length > 20 ? title.slice(0, 20) + '....' : title;
     const sliceOverview = overview.length > 50 ? overview.slice(0, 50) + '....' : overview;
+    
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
     const [show, setShow] = useState(false);
@@ -17,7 +18,7 @@ function Shopping({ overview, title, poster_path, release_date }) {
                 <Card.Text>{sliceOverview}</Card.Text>
                 <Card.Img className='image-card pb-2' variant="top" src={poster_path} />
                 <Button style={{ textEmphasisColor: 'green' }} variant="dark" onClick={handleShow}>View detail</Button>
-                <Modal
+                <Modal  
                     show={show}
                     onHide={handleClose}
                     backdrop="static"

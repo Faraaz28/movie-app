@@ -42,7 +42,7 @@ function App() {
       <Button className='ms-2 search-btn' variant="dark" >Search</Button>
       <Container>
         <Row>
-          {filterMovie.map((item, index) => (
+          {filterMovie.map((item) => (
             <Col lg={4} className='mb-3' >
               <Shopping
                 overview={item.overview}
