@@ -7,7 +7,6 @@ import Shopping from './component/Shopping';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
-import Movie from './Movie';
 
 function App() {
   const [movie, setMovie] = useState([]);
@@ -43,7 +42,7 @@ function App() {
         onChange={e => setSearchMovie(e.target.value)} />
         
       <Button className='ms-2 search-btn' variant="dark" >Search</Button>
-      <Movie/>
+   
       <Container>
         <Row>
           {filterMovie.map((item) => (
