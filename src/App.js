@@ -7,6 +7,7 @@ import Shopping from './component/Shopping';
 import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
+import Movie from './Movie';
 
 function App() {
   const [movie, setMovie] = useState([]);
@@ -34,12 +35,15 @@ function App() {
   return (
     <>
       <h1 className='movie-text'>Movie App</h1>
+
       <input className='movie-input' style={{ backgroundColor: '#9b93aa', textDecorationColor: 'black', borderBlockColor: 'black', marginTop: '25px', }}
         type='text'
         placeholder='search'
         value={searchMovie}
         onChange={e => setSearchMovie(e.target.value)} />
+        
       <Button className='ms-2 search-btn' variant="dark" >Search</Button>
+      <Movie/>
       <Container>
         <Row>
           {filterMovie.map((item) => (

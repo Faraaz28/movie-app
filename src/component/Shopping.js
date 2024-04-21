@@ -12,21 +12,22 @@ function Shopping({ overview, title, poster_path, release_date }) {
     const [show, setShow] = useState(false);
 
     return (
-        <Card className='movie-card m   b-5' style={{ width: '18rem', marginTop: '20px', backgroundColor: '#929292 ', }}>
+        <Card className='movie-card    b-5' style={{ width: '18rem', marginTop: '20px', backgroundColor: '#929292 ', }}>
             <Card.Body>
                 <Card.Title >{sliceTitle}</Card.Title>
                 <Card.Text>{sliceOverview}</Card.Text>
                 <Card.Img className='image-card pb-2' variant="top" src={poster_path} />
                 <Button style={{ textEmphasisColor: 'green' }} variant="dark" onClick={handleShow}>View detail</Button>
                 <Modal  
+                   
                     show={show}
                     onHide={handleClose}
                     backdrop="static"
                     keyboard={false}>
-                    <Modal.Header closeButton>
+                    <Modal.Header  style={{ backgroundColor:'#aca8b3'}} closeButton>
                         <Modal.Title>{title}</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body style={{ textDecorationColor: 'white', }}>
+                    <Modal.Body style={{ textDecorationColor: 'white', backgroundColor:'#aca8b3' }}>
                         <img
                             src={poster_path}
                             className='image-responsive'
@@ -34,7 +35,7 @@ function Shopping({ overview, title, poster_path, release_date }) {
                         <br />
                         {overview}<br />{release_date}
                     </Modal.Body>
-                    <Modal.Footer>
+                    <Modal.Footer  style={{ backgroundColor:'#aca8b3'}}>
                         <Button variant="dark" onClick={handleClose}>
                             Close
                         </Button>
